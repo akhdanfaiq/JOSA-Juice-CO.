@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AURUM JUICE CO. — Jus Cold-Pressed Premium</title>
+  <meta name="description" content="AURUM JUICE CO. — Marketplace jus premium cold-pressed. 12 pilihan jus segar tanpa pengawet dari bahan alami pilihan. Detoks, Energi, Imunitas, dan Glow. Pesan sekarang, dikirim dalam 48 jam." />
+  <meta name="keywords" content="jus premium, cold pressed, jus segar, jus sehat, detoks, jus organik, jus buah, jus sayur, aurum juice" />
+  <meta property="og:title" content="AURUM JUICE CO. — Jus Cold-Pressed Premium" />
+  <meta property="og:description" content="Marketplace jus premium cold-pressed. 12 pilihan jus segar tanpa pengawet, tanpa pemanis buatan. Pesan sekarang." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="grain-overlay" aria-hidden="true"></div>
+
+<!-- ===== NAVBAR ===== -->
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="#" class="logo-wrap flex flex-col leading-none">
+      <span class="logo-main">JOSA</span>
+      <span class="logo-sub">JUICE CO.</span>
+    </a>
+    <ul class="nav-links hidden md:flex items-center gap-8">
+      <li><a href="#categories">Koleksi</a></li>
+      <li><a href="#ingredients">Bahan</a></li>
+      <li><a href="#about">Tentang</a></li>
+      <li><a href="#ritual">Jurnal</a></li>
+      <li><a href="#contact">Kontak</a></li>
+    </ul>
+    <div class="flex items-center gap-4">
+      <button class="cart-btn relative" id="cartBtn" aria-label="Buka keranjang">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        <span class="cart-badge" id="cartCount">0</span>
+      </button>
+      <a href="#collection" class="btn-ritual hidden md:inline-flex">Mulai Ritualmu</a>
+      <button class="md:hidden text-[#F5F0E8]" id="mobileMenuBtn" aria-label="Toggle menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobileMenu" class="mobile-menu hidden md:hidden px-6 pb-6">
+    <ul class="flex flex-col gap-4">
+      <li><a href="#categories" class="mobile-nav-link">Koleksi</a></li>
+      <li><a href="#ingredients" class="mobile-nav-link">Bahan</a></li>
+      <li><a href="#about" class="mobile-nav-link">Tentang</a></li>
+      <li><a href="#ritual" class="mobile-nav-link">Jurnal</a></li>
+      <li><a href="#contact" class="mobile-nav-link">Kontak</a></li>
+      <li><a href="#collection" class="btn-ritual inline-flex mt-2">Mulai Ritualmu</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section id="hero" class="hero-section relative flex flex-col justify-center overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 w-full grid md:grid-cols-2 gap-12 items-center pt-24">
+    <div class="hero-content fade-in">
+      <p class="hero-eyebrow">Est. 2024 — Produksi Terbatas</p>
+      <h1 class="hero-headline">
+        <span class="hero-line1">PERAS.<br>MURNI.</span>
+        <span class="hero-line2">PREMIUM.</span>
+      </h1>
+      <p class="hero-sub">Jus cold-pressed yang dibuat untuk mereka yang menuntut lebih dari kesehatan.</p>
+      <div class="flex flex-wrap gap-4 mt-10">
+        <a href="#collection" class="btn-primary">Jelajahi Koleksi</a>
+        <button class="btn-ghost" id="watchProcessBtn">
+          <span class="btn-play-icon">▶</span> Lihat Prosesnya
+        </button>
+      </div>
+    </div>
+    <div class="hero-visual relative flex items-center justify-center">
+      <div class="blob-shape" aria-hidden="true"></div>
+      <div class="hero-bottles" aria-hidden="true">
+        <div class="bottle bottle-1">🍋</div>
+        <div class="bottle bottle-2">🥬</div>
+        <div class="bottle bottle-3">🍊</div>
+      </div>
+    </div>
+  </div>
+  <div class="ticker-wrap mt-16">
+    <div class="ticker-track">
+      <span>COLD PRESSED</span><span class="ticker-dot">•</span>
+      <span>TANPA PENGAWET</span><span class="ticker-dot">•</span>
+      <span>ORGANIK</span><span class="ticker-dot">•</span>
+      <span>SINGLE ORIGIN</span><span class="ticker-dot">•</span>
+      <span>COLD PRESSED</span><span class="ticker-dot">•</span>
+      <span>TANPA PENGAWET</span><span class="ticker-dot">•</span>
+      <span>ORGANIK</span><span class="ticker-dot">•</span>
+      <span>SINGLE ORIGIN</span><span class="ticker-dot">•</span>
+      <span>COLD PRESSED</span><span class="ticker-dot">•</span>
+      <span>TANPA PENGAWET</span><span class="ticker-dot">•</span>
+      <span>ORGANIK</span><span class="ticker-dot">•</span>
+      <span>SINGLE ORIGIN</span><span class="ticker-dot">•</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CATEGORIES ===== -->
+<section id="categories" class="section-pad">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="section-header fade-in">
+      <p class="section-eyebrow">Dikurasi Untuk Anda</p>
+      <h2 class="section-title">Belanja per <em>Koleksi</em></h2>
+    </div>
+    <div class="categories-grid mt-12">
+      <div class="cat-card cat-detox fade-in" data-filter="detox">
+        <div class="cat-icon">🌿</div>
+        <h3 class="cat-name">Detoks &amp; Bersih</h3>
+        <p class="cat-count">3 produk</p>
+        <span class="cat-arrow">→</span>
+      </div>
+      <div class="cat-card cat-energy fade-in" data-filter="energy">
+        <div class="cat-icon">⚡</div>
+        <h3 class="cat-name">Penguat Energi</h3>
+        <p class="cat-count">3 produk</p>
+        <span class="cat-arrow">→</span>
+      </div>
+      <div class="cat-card cat-immunity fade-in" data-filter="immunity">
+        <div class="cat-icon">🍋</div>
+        <h3 class="cat-name">Perisai Imunitas</h3>
+        <p class="cat-count">3 produk</p>
+        <span class="cat-arrow">→</span>
+      </div>
+      <div class="cat-card cat-glow fade-in" data-filter="glow">
+        <div class="cat-icon">✨</div>
+        <h3 class="cat-name">Glow &amp; Kulit</h3>
+        <p class="cat-count">3 produk</p>
+        <span class="cat-arrow">→</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRODUCT GRID ===== -->
+<section id="collection" class="section-pad">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 fade-in">
+      <div>
+        <p class="section-eyebrow">Marketplace</p>
+        <h2 class="section-title">Semua <em>Koleksi</em></h2>
+      </div>
+      <div class="filter-tabs" id="filterTabs">
+        <button class="filter-btn active" data-filter="all">Semua</button>
+        <button class="filter-btn" data-filter="bestseller">Terlaris</button>
+        <button class="filter-btn" data-filter="detox">Detoks</button>
+        <button class="filter-btn" data-filter="energy">Energi</button>
+        <button class="filter-btn" data-filter="immunity">Imunitas</button>
+        <button class="filter-btn" data-filter="glow">Glow</button>
+      </div>
+    </div>
+    <div class="product-grid mt-12" id="productGrid"></div>
+  </div>
+</section>
+
+<!-- ===== INGREDIENTS ===== -->
+<section id="ingredients" class="section-pad ingredients-section">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid md:grid-cols-2 gap-16 items-center">
+      <div class="fade-in">
+        <p class="section-eyebrow">Apa yang Ada di Dalamnya</p>
+        <h2 class="section-title">Hanya Bahan <em>Paling Murni</em></h2>
+        <p class="body-text mt-6">Setiap gelas dibuat dari bahan segar pilihan tanpa pengawet, tanpa pemanis buatan — hanya buah dan sayur asli yang diperas langsung untuk Anda.</p>
+        <div class="ingredients-list mt-10">
+          <div class="ingredient-item fade-in">
+            <span class="ingredient-icon">🥬</span>
+            <div>
+              <h4 class="ingredient-name">Sayuran Segar</h4>
+              <p class="ingredient-desc">Timun, seledri, bayam — detoks alami kaya klorofil</p>
+            </div>
+          </div>
+          <div class="ingredient-item fade-in">
+            <span class="ingredient-icon">🍋🍊</span>
+            <div>
+              <h4 class="ingredient-name">Buah Citrus</h4>
+              <p class="ingredient-desc">Lemon, jeruk, jeruk nipis — vitamin C tinggi untuk imunitas</p>
+            </div>
+          </div>
+          <div class="ingredient-item fade-in">
+            <span class="ingredient-icon">🍌</span>
+            <div>
+              <h4 class="ingredient-name">Buah Energi</h4>
+              <p class="ingredient-desc">Pisang, alpukat, mangga, kurma — sumber energi alami tahan lama</p>
+            </div>
+          </div>
+          <div class="ingredient-item fade-in">
+            <span class="ingredient-icon">🍓</span>
+            <div>
+              <h4 class="ingredient-name">Buah Glow</h4>
+              <p class="ingredient-desc">Semangka, stroberi, pepaya — antioksidan untuk kulit bercahaya</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ingredients-visual fade-in">
+        <div class="ingredients-orb orb-1">🌿</div>
+        <div class="ingredients-orb orb-2">🍊</div>
+        <div class="ingredients-orb orb-3">🫚</div>
+        <div class="ingredients-orb orb-4">🍋</div>
+        <div class="ingredients-center">
+          <span>100%</span>
+          <small>Organik</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about" class="section-pad">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="about-grid">
+      <div class="about-text fade-in">
+        <p class="section-eyebrow">Kisah Kami</p>
+        <h2 class="section-title">Kesehatan sebagai <em>Ritual</em></h2>
+        <p class="body-text mt-6">JOSA lahir dari keyakinan sederhana: bahwa apa yang Anda masukkan ke tubuh haruslah luar biasa. Kami bekerja langsung dengan petani kecil, memproduksi dalam micro-batch, dan mengirimkan dalam 48 jam setelah pemerasan.</p>
+        <p class="body-text mt-4">Tanpa jalan pintas. Tanpa kompromi. Hanya jus murni yang hidup — seperti yang alam inginkan.</p>
+        <a href="#collection" class="btn-primary mt-8 inline-flex">Belanja Sekarang</a>
+      </div>
+      <div class="about-stats fade-in">
+        <div class="stat-card">
+          <span class="stat-num">48j</span>
+          <span class="stat-label">Kebun ke Botol</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">100%</span>
+          <span class="stat-label">Bersertifikat Organik</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">0</span>
+          <span class="stat-label">Pengawet</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">12</span>
+          <span class="stat-label">Racikan Unik</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== RITUAL (BLOG) ===== -->
+<section id="ritual" class="section-pad">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="section-header fade-in">
+      <p class="section-eyebrow">Jurnal Kami</p>
+      <h2 class="section-title">The <em>Ritual</em></h2>
+    </div>
+    <div class="blog-grid mt-12">
+      <article class="blog-card fade-in">
+        <div class="blog-img blog-img-1"><span class="blog-tag">Kesehatan</span></div>
+        <div class="blog-body">
+          <p class="blog-date">28 Maret 2026</p>
+          <h3 class="blog-title">Ilmu di Balik Cold-Pressing</h3>
+          <p class="blog-excerpt">Mengapa tekanan hidrolik menjaga lebih banyak enzim dibanding metode sentrifugal — dan mengapa itu penting bagi sel Anda.</p>
+          <a href="#" class="blog-link">Baca Selengkapnya →</a>
+        </div>
+      </article>
+      <article class="blog-card fade-in">
+        <div class="blog-img blog-img-2"><span class="blog-tag">Ritual</span></div>
+        <div class="blog-body">
+          <p class="blog-date">15 Maret 2026</p>
+          <h3 class="blog-title">Protokol Pagi untuk Performa Puncak</h3>
+          <p class="blog-excerpt">Cara membangun ritual pagi di sekitar nutrisi yang menentukan nada untuk seluruh hari Anda.</p>
+          <a href="#" class="blog-link">Baca Selengkapnya →</a>
+        </div>
+      </article>
+      <article class="blog-card fade-in">
+        <div class="blog-img blog-img-3"><span class="blog-tag">Bahan</span></div>
+        <div class="blog-body">
+          <p class="blog-date">2 Maret 2026</p>
+          <h3 class="blog-title">Adaptogen: Kearifan Kuno, Sains Modern</h3>
+          <p class="blog-excerpt">Dari ashwagandha hingga reishi — akar dan jamur yang mengubah minuman fungsional.</p>
+          <a href="#" class="blog-link">Baca Selengkapnya →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT PERSON ===== -->
+<section id="contact" class="section-pad contact-section">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="contact-grid fade-in">
+      <div>
+        <p class="section-eyebrow">Hubungi Kami</p>
+        <h2 class="section-title">Ada Pertanyaan? <em>Kami Siap</em></h2>
+        <p class="body-text mt-4">Tim kami siap membantu Anda memilih jus yang tepat, mengatur program cleanse, atau menjawab pertanyaan seputar pengiriman.</p>
+        <div class="contact-cards mt-10">
+          <a href="https://wa.link/75cjz8" target="_blank" rel="noopener" class="contact-card contact-wa">
+            <div class="contact-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </div>
+            <div>
+              <p class="contact-label">WhatsApp</p>
+              <p class="contact-value">+62 777-407-3345</p>
+              <p class="contact-hint">Balas dalam 1 jam</p>
+            </div>
+            <span class="contact-arrow">→</span>
+          </a>
+          <a href="https://www.instagram.com/jaoeza?igsh=MXFhOXh3ZXV6b2VvMQ==" target="_blank" rel="noopener" class="contact-card contact-ig">
+            <div class="contact-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </div>
+            <div>
+              <p class="contact-label">Instagram</p>
+              <p class="contact-value">@jaoeza</p>
+              <p class="contact-hint">DM untuk konsultasi</p>
+            </div>
+            <span class="contact-arrow">→</span>
+          </a>
+        </div>
+      </div>
+      <div class="contact-hours fade-in">
+        <h3 class="contact-hours-title">Jam Operasional</h3>
+        <div class="hours-list">
+          <div class="hours-row">
+            <span>Senin – Jumat</span>
+            <span class="hours-time">08.00 – 20.00 WIB</span>
+          </div>
+          <div class="hours-row">
+            <span>Sabtu</span>
+            <span class="hours-time">09.00 – 18.00 WIB</span>
+          </div>
+          <div class="hours-row">
+            <span>Minggu</span>
+            <span class="hours-time">10.00 – 16.00 WIB</span>
+          </div>
+        </div>
+        <div class="contact-note mt-6">
+          <span class="contact-note-icon">📦</span>
+          <p>Pesanan sebelum jam 12.00 dikirim hari yang sama. Pengiriman ke seluruh pulau Jawa.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="max-w-7xl mx-auto px-6 py-16">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-wrap">
+          <span class="logo-main">JOSA</span>
+          <span class="logo-sub">JUICE CO.</span>
+        </div>
+        <p class="footer-tagline mt-4">Diperas dengan niat.<br>Dibuat untuk yang terpilih.</p>
+        <div class="social-links mt-6">
+          <a href="#" aria-label="Instagram" class="social-link">IG</a>
+          <a href="#" aria-label="Twitter" class="social-link">TW</a>
+          <a href="#" aria-label="Pinterest" class="social-link">PT</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">Belanja</h4>
+        <ul class="footer-links">
+          <li><a href="#collection">Semua Jus</a></li>
+          <li><a href="#categories">Koleksi</a></li>
+          <li><a href="#">Program Cleanse</a></li>
+          <li><a href="#">Paket Hadiah</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">Perusahaan</h4>
+        <ul class="footer-links">
+          <li><a href="#about">Kisah Kami</a></li>
+          <li><a href="#ingredients">Bahan</a></li>
+          <li><a href="#ritual">Jurnal</a></li>
+          <li><a href="#">Keberlanjutan</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">Tetap dalam Ritual</h4>
+        <p class="footer-newsletter-text">Tetes kesehatan mingguan, racikan baru, dan ritual — langsung ke kotak masuk Anda.</p>
+        <form class="newsletter-form mt-4" onsubmit="handleNewsletter(event)">
+          <input type="email" placeholder="email@anda.com" class="newsletter-input" required />
+          <button type="submit" class="newsletter-btn">→</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom mt-12">
+      <p>© 2026 JOSA Juice Co. Semua hak dilindungi.</p>
+      <div class="footer-legal">
+        <a href="#">Privasi</a>
+        <a href="#">Syarat</a>
+        <a href="#">Pengiriman</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== CART DRAWER ===== -->
+<div class="cart-overlay" id="cartOverlay" aria-hidden="true"></div>
+<aside class="cart-drawer" id="cartDrawer" aria-label="Keranjang belanja">
+  <div class="cart-header">
+    <h3 class="cart-title">Keranjang Anda</h3>
+    <button class="cart-close" id="cartClose" aria-label="Tutup keranjang">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-footer" id="cartFooter" style="display:none">
+    <div class="cart-total">
+      <span>Total</span>
+      <span id="cartTotal">Rp 0</span>
+    </div>
+    <button class="btn-primary w-full mt-4" id="checkoutBtn">Lanjut ke Checkout</button>
+  </div>
+</aside>
+
+<!-- ===== CHECKOUT MODAL ===== -->
+<div class="modal-overlay" id="checkoutModal" aria-hidden="true">
+  <div class="modal-box checkout-modal-box">
+    <button class="modal-close" id="checkoutModalClose" aria-label="Tutup checkout">✕</button>
+    <div id="checkoutFormView">
+      <p class="section-eyebrow mb-2">Konfirmasi Pesanan</p>
+      <h3 class="checkout-title">Detail <em>Pengiriman</em></h3>
+      <div id="checkoutSummary" class="checkout-summary mt-4"></div>
+      <form id="checkoutForm" class="checkout-form mt-6" onsubmit="submitOrder(event)">
+        <div class="form-group">
+          <label class="form-label">Nama Lengkap *</label>
+          <input type="text" id="fieldNama" class="form-input" placeholder="Budi Santoso" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Nomor WhatsApp *</label>
+          <input type="tel" id="fieldWa" class="form-input" placeholder="087774073345" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email</label>
+          <input type="email" id="fieldEmail" class="form-input" placeholder="email@anda.com" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Alamat Lengkap *</label>
+          <textarea id="fieldAlamat" class="form-input form-textarea" placeholder="Jl. Contoh No. 1, Kota, Provinsi" required></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Catatan (opsional)</label>
+          <input type="text" id="fieldCatatan" class="form-input" placeholder="Instruksi khusus pengiriman..." />
+        </div>
+        <div class="checkout-total-row">
+          <span>Total Pembayaran</span>
+          <span id="checkoutTotalDisplay" class="checkout-total-amount">Rp 0</span>
+        </div>
+        <button type="submit" class="btn-primary w-full mt-4" id="submitOrderBtn">
+          Konfirmasi Pesanan
+        </button>
+      </form>
+    </div>
+    <div id="checkoutSuccessView" style="display:none" class="checkout-success">
+      <div class="success-icon">✅</div>
+      <h3 class="checkout-title">Pesanan Diterima!</h3>
+      <p class="body-text mt-3 text-center">Terima kasih, <strong id="successName"></strong>. Pesanan Anda telah dicatat. Tim kami akan menghubungi Anda via WhatsApp untuk konfirmasi pembayaran.</p>
+      <p class="order-id-display mt-4" id="successOrderId"></p>
+      <button class="btn-primary mt-6" onclick="closeCheckout()">Tutup</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== VIDEO MODAL ===== -->
+<div class="modal-overlay" id="videoModal" aria-hidden="true">
+  <div class="modal-box video-modal-box"></div>
+    <button class="modal-close" id="modalClose" aria-label="Tutup video">✕</button>
+    <p class="section-eyebrow mb-3">Proses Kami</p>
+    <video id="processVideo" class="modal-video" controls playsinline>
+      <source src="ssstik.io_1775446363443.mp4" type="video/mp4" />
+      Browser Anda tidak mendukung video.
+    </video>
+    <p class="modal-video-caption">Cold-pressed. Micro-batch. Dikirim dalam 48 jam.</p>
+  </div>
+</div>
+
+<!-- ===== TOAST ===== -->
+<div class="toast" id="toast"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
